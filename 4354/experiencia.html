@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Disciplinas y Formación</title>
+
+<style>
+*{box-sizing:border-box}
+body{margin:0;font-family:Arial;background:#eef2f5;color:#263445}
+header{background:#183b56;color:white;text-align:center;padding:30px}
+nav{background:#102b40;padding:15px;text-align:center}
+nav a{color:white;text-decoration:none;margin:12px;font-weight:bold}
+main{max-width:850px;margin:30px auto;background:white;padding:30px;border-radius:12px}
+input,textarea{width:100%;padding:12px;margin:8px 0 18px;border:1px solid #bbb;border-radius:6px}
+label{font-weight:bold}
+button{background:#183b56;color:white;padding:12px 20px;border:0;border-radius:6px}
+h2{color:#183b56}
+@media(max-width:500px){
+main{margin:15px;padding:18px}
+nav a{display:inline-block;margin:5px}
+}
+</style>
+</head>
+
+<body>
+
+<header>
+<h1>DISCIPLINAS Y FORMACIÓN</h1>
+<p>Estudios y conocimientos académicos</p>
+</header>
+
+<nav>
+<a href="index.html">Inicio</a>
+<a href="experiencia.html">Experiencia</a>
+<a href="disciplinas.html">Disciplinas</a>
+</nav>
+
+<main>
+<form>
+
+<h2>Formación académica</h2>
+
+<label>Institución educativa:</label>
+<input type="text" placeholder="Nombre de la institución">
+
+<label>Nivel de estudios:</label>
+<input type="text" placeholder="Bachiller, técnico, tecnólogo, etc.">
+
+<label>Año de inicio:</label>
+<input type="number" placeholder="Año">
+
+<label>Año de finalización:</label>
+<input type="number" placeholder="Año">
+
+<h2>Disciplinas y actividades</h2>
+
+<label>Disciplinas que practicas:</label>
+<textarea rows="5" placeholder="Deportes, informática, arte, música, etc."></textarea>
+
+<h2>Cursos y certificaciones</h2>
+
+<label>Nombre del curso:</label>
+<input type="text" placeholder="Nombre del curso">
+
+<label>Institución que lo ofrece:</label>
+<input type="text" placeholder="Nombre de la institución">
+
+<label>Duración:</label>
+<input type="text" placeholder="Ejemplo: 40 horas">
+
+<label>Otros estudios o certificaciones:</label>
+<textarea rows="5" placeholder="Escribe otros estudios o certificados"></textarea>
+
+<button type="reset">Limpiar formulario</button>
+
+</form>
+</main>
+
+</body>
+</html>

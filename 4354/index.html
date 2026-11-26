@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mi Hoja de Vida</title>
+
+<style>
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #eef2f5;
+    color: #263445;
+}
+
+header {
+    background: #183b56;
+    color: white;
+    text-align: center;
+    padding: 30px;
+}
+
+nav {
+    background: #102b40;
+    padding: 15px;
+    text-align: center;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 12px;
+    font-weight: bold;
+}
+
+main {
+    max-width: 850px;
+    margin: 30px auto;
+    background: white;
+    padding: 30px;
+    border-radius: 12px;
+}
+
+h2 {
+    color: #183b56;
+}
+
+label {
+    display: block;
+    font-weight: bold;
+    margin-top: 15px;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 12px;
+    margin: 8px 0 18px;
+    border: 1px solid #bbb;
+    border-radius: 6px;
+}
+
+button {
+    background: #183b56;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.foto-contenedor {
+    text-align: center;
+    margin: 20px 0;
+}
+
+#vistaFoto {
+    width: 150px;
+    height: 150px;
+    border: 2px dashed #183b56;
+    border-radius: 10px;
+    object-fit: cover;
+    display: block;
+    margin: 15px auto;
+}
+
+@media(max-width:500px) {
+    main {
+        margin: 15px;
+        padding: 18px;
+    }
+
+    nav a {
+        display: inline-block;
+        margin: 5px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <h1>MI HOJA DE VIDA</h1>
+    <p>Presentación personal</p>
+</header>
+
+<nav>
+    <a href="index.html">Inicio</a>
+    <a href="experiencia.html">Experiencia</a>
+    <a href="disciplinas.html">Disciplinas</a>
+</nav>
+
+<main>
+
+<form>
+
+    <h2>Fotografía personal</h2>
+
+    <div class="foto-contenedor">
+
+        <img id="vistaFoto"
+        src="https://placehold.co/150x150?text=Mi+Foto"
+        alt="Vista previa de fotografía">
+
+        <label for="foto">Seleccionar fotografía:</label>
+
+        <input
+        type="file"
+        id="foto"
+        accept="image/*"
+        onchange="mostrarFoto(event)">
+
+    </div>
+
+    <h2>Datos personales</h2>
+
+    <label>Nombre completo:</label>
+    <input type="text" placeholder="Escribe tu nombre">
+
+    <label>Documento:</label>
+    <input type="text" placeholder="Número de documento">
+
+    <label>Fecha de nacimiento:</label>
+    <input type="date">
+
+    <label>Correo electrónico:</label>
+    <input type="email" placeholder="Correo electrónico">
+
+    <label>Teléfono:</label>
+    <input type="tel" placeholder="Número de teléfono">
+
+    <label>Dirección:</label>
+    <input type="text" placeholder="Dirección">
+
+    <h2>Perfil personal</h2>
+
+    <label>Sobre mí:</label>
+    <textarea rows="6"
+    placeholder="Describe quién eres, tus cualidades, intereses y objetivos"></textarea>
+
+    <button type="reset">Limpiar formulario</button>
+
+</form>
+
+</main>
+
+<script>
+function mostrarFoto(event) {
+
+    const archivo = event.target.files[0];
+
+    if (archivo && archivo.type.startsWith("image/")) {
+
+        const lector = new FileReader();
+
+        lector.onload = function(e) {
+            document.getElementById("vistaFoto").src = e.target.result;
+        };
+
+        lector.readAsDataURL(archivo);
+    }
+}
+</script>
+
+</body>
+</html>
